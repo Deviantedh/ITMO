@@ -1,0 +1,130 @@
+# ==============================================================================
+# Master .gitignore for ITMO University Academic & Engineering Portfolio
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. OS & File System Artifacts
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------------------------
+# 2. Personal & Sensitive Files
+# ------------------------------------------------------------------------------
+*[Пп]аспорт*
+*[Оо]бъяснительная*
+*[Сс]кан*
+*[Pp]assport*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+*.env
+*.env.*
+*.credentials
+*.token
+
+# ------------------------------------------------------------------------------
+# 3. Archives & Heavy Media
+# ------------------------------------------------------------------------------
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.flac
+
+# ------------------------------------------------------------------------------
+# 4. User Rule: Draft Notes, Internal Contexts & Cheat-Sheets (FORBIDDEN)
+# ------------------------------------------------------------------------------
+*PROJECT_CONTEXT*.md
+*THEORY*.md
+*THEORY*
+*Теория*.md
+*Теория*
+*NOTES*.md
+*DEFENSE*.md
+*QA*.md
+*шпаргалка*.md
+*конспект*.md
+*конспект*
+*ВОПРОСЫ*
+*вопросы*
+
+# ------------------------------------------------------------------------------
+# 5. IDEs & Editors
+# ------------------------------------------------------------------------------
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+*.sublime-project
+*.sublime-workspace
+.swp
+.swo
+*~
+~$*
+
+# ------------------------------------------------------------------------------
+# 6. Build Artifacts, Binaries & Dependencies
+# ------------------------------------------------------------------------------
+# Java / JVM
+target/
+build/
+out/
+bin/
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+
+# C / C++
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.a
+*.lib
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Node.js
+node_modules/
+
+# Simulation dumps & logs
+*.vcd
+*.fsdb
+*.wlf
+*.log
+*.tmp
+*.bak
