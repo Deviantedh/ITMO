@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/devianted/IdeaProjects/TPO2/src/main/java</OriginalElement>
+  <nodes>
+    <node x="1001.9018018635925" y="480.30507785868474">org.example.trig.Csc</node>
+    <node x="1421.1998395847697" y="320.8330011742859">org.example.log.Ln</node>
+    <node x="784.3561964903743" y="649.7771545430835">org.example.function.AbstractMathFunction</node>
+    <node x="1001.9018018635925" y="320.8330011742859">org.example.trig.Sec</node>
+    <node x="875.8561964903744" y="805.3294352554216">org.example.Main</node>
+    <node x="163.305726421238" y="480.30507785868474">org.example.trig.Cos</node>
+    <node x="1036.9902267676805" y="138.3609244898871">org.example.util.DataPlotter</node>
+    <node x="1421.1998395847697" y="485.30507785868474">org.example.log.LogNBase</node>
+    <node x="293.0609248955271" y="731.1026772582255">org.example.function.MathFunction</node>
+    <node x="1275.6514680852215" y="717.1026772582255">org.example.EquationSystem</node>
+    <node x="166.0068789381971" y="320.8330011742859">org.example.trig.Sin</node>
+    <node x="583.9543404008948" y="320.8330011742859">org.example.trig.Tan</node>
+    <node x="582.6037641424152" y="480.30507785868474">org.example.trig.Cot</node>
+    <node x="449.3225675542527" y="138.3609244898871">org.example.util.CsvWriter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.example.trig.Sin" target="org.example.function.AbstractMathFunction" relationship="GENERALIZATION">
+      <point x="-3.6717435796163045E-4" y="-38.999568597516884" />
+      <point x="331.50651176383917" y="276.95193591455273" />
+      <point x="958.8560515587919" y="276.95193591455273" />
+      <point x="-1.4493158226969172E-4" y="-55.500181912118904" />
+    </edge>
+    <edge source="org.example.trig.Cot" target="org.example.function.AbstractMathFunction" relationship="GENERALIZATION">
+      <point x="1.8919740318779077E-4" y="-39.000463268524754" />
+      <point x="748.1039533398184" y="448.57276368491324" />
+      <point x="957.7527830030039" y="448.57276368491324" />
+      <point x="957.7527830030039" y="574.456608811749" />
+      <point x="958.8560515587919" y="574.456608811749" />
+      <point x="-1.4493158226969172E-4" y="-55.500181912118904" />
+    </edge>
+    <edge source="org.example.log.Ln" target="org.example.function.AbstractMathFunction" relationship="GENERALIZATION">
+      <point x="-3.9387861397699453E-4" y="-73.500045507724" />
+      <point x="1597.6994457061558" y="276.95193591455273" />
+      <point x="958.8560515587919" y="276.95193591455273" />
+      <point x="-1.4493158226969172E-4" y="-55.500181912118904" />
+    </edge>
+    <edge source="org.example.trig.Cos" target="org.example.function.AbstractMathFunction" relationship="GENERALIZATION">
+      <point x="-2.994989446882812E-4" y="39.00031202121954" />
+      <point x="328.8054269222933" y="608.3391188251001" />
+      <point x="958.8560515587919" y="608.3391188251001" />
+      <point x="-1.4493158226969172E-4" y="-55.500181912118904" />
+    </edge>
+    <edge source="org.example.trig.Sec" target="org.example.function.AbstractMathFunction" relationship="GENERALIZATION">
+      <point x="3.2711572544030787E-4" y="39.00043203564633" />
+      <point x="1167.402128979318" y="448.57276368491324" />
+      <point x="957.7527830030039" y="448.57276368491324" />
+      <point x="957.7527830030039" y="488.6997609712165" />
+      <point x="958.8560515587919" y="488.6997609712165" />
+      <point x="-1.4493158226969172E-4" y="-55.500181912118904" />
+    </edge>
+    <edge source="org.example.trig.Tan" target="org.example.function.AbstractMathFunction" relationship="GENERALIZATION">
+      <point x="1.664906313364213" y="39.00033735127528" />
+      <point x="751.119246714259" y="448.57276368491324" />
+      <point x="957.7527830030039" y="448.57276368491324" />
+      <point x="957.7527830030039" y="551.1295060080107" />
+      <point x="958.8560515587919" y="551.1295060080107" />
+      <point x="-1.4493158226969172E-4" y="-55.500181912118904" />
+    </edge>
+    <edge source="org.example.log.LogNBase" target="org.example.function.AbstractMathFunction" relationship="GENERALIZATION">
+      <point x="4.7950735279300716E-4" y="39.00023902878354" />
+      <point x="1586.7003190921225" y="609.0411162008841" />
+      <point x="958.8560515587919" y="609.0411162008841" />
+      <point x="-1.4493158226969172E-4" y="-55.500181912118904" />
+    </edge>
+    <edge source="org.example.function.AbstractMathFunction" target="org.example.function.MathFunction" relationship="REALIZATION">
+      <point x="174.5" y="0.0" />
+      <point x="467.5609248955271" y="705.2771545430835" />
+      <point x="0.0" y="32.0" />
+    </edge>
+    <edge source="org.example.trig.Csc" target="org.example.function.AbstractMathFunction" relationship="GENERALIZATION">
+      <point x="4.43100780671557E-4" y="43.99992089872213" />
+      <point x="1167.402244964373" y="448.57276368491324" />
+      <point x="958.8560515587919" y="448.57276368491324" />
+      <point x="-1.4493158226969172E-4" y="-55.500181912118904" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.8829656609985903" showDependencies="false" x="967.2054374175792" y="558.2595546449268" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
