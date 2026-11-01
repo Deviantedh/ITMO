@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /*background-color: #f4f4f9;*/
+    background-image: url('images/bg.jpg'); /* Путь к картинке */
+    background-size: cover; /* Заполняет весь экран */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Без повторов */
+    background-attachment: fixed; /* Фон остаётся на месте при прокрутке */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+.container {
+    flex: 1;
+    min-width: 150px; /* Минимальная ширина контейнера */
+}
+
+@media (max-width: 1184px) {
+    .content {
+        flex-direction: column; /* Переход на вертикальное расположение */
+        align-items: center; /* Выравнивание по центру */
+    }
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #2e2c50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-select-button .p-button {
+    margin: 2px; /* Раздвигаем кнопки */
+    padding: 4px 8px; /* Делаем их больше */
+    font-size: 16px;
+    border-radius: 10px;
+}
+.custom-select-button2 .p-button {
+    margin: 2px;
+    padding: 1px 2px;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 40px;
+}
+
+
+.form-container input,
+.form-container select,
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 2px solid #4535d5;
+    box-sizing: border-box;
+}
+
+input[type="text"], select {
+    padding: 12px 10px;
+}
+
+button {
+    background-color: #4c40d3;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1c2a85;
+}
+
+button:last-of-type {
+    margin-bottom: 0;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c2e50;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+input[type="text"]:focus, select:focus {
+    box-shadow: 0 0 5px rgba(124, 57, 225, 0.75);
+}
+
+.canvas-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #2d2c50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+canvas {
+    cursor: crosshair;
+}
+
+
+table {
+    max-width: 400px;
+    max-height: 500px;
+    overflow: auto;
+    display: block;
+    border-collapse: collapse;
+}
+
+thead {
+    border: 1px solid #a8a8a8;
+    color: #000000;
+    position: sticky;
+    top: -1%    ;
+    z-index: 1;
+}
+
+
+th{
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: center;
+    unicode-bidi: isolate;
+    background-color: #eaeaea;
+    border: 1px solid #a8a8a8;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #a8a8a8;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #eaeaea;
+}
+
+
+.evil_margin_trick{
+    color: #FFFFFF;
+}

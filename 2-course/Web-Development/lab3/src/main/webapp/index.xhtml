@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Web lab3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <h:outputStylesheet library="styles" name="main.css"/>
+    <h:outputStylesheet>
+        .glow:hover {
+            box-shadow: 0 0 5px #9f7aea, 0 0 10px #9f7aea, 0 0 15px #9f7aea, 0 0 20px #9f7aea;
+        }
+    </h:outputStylesheet>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</h:head>
+<h:body>
+
+    <!-- Link to main.xhtml -->
+    <h:panelGroup layout="block" styleClass="fixed" style="top: 68%; left: 50%; transform: translateX(-50%);">
+        <h:link styleClass="bg-transparent hover:bg-blue-500 text-white px-4 h-8 w-104 rounded opacity-0 hover:opacity-80 hover:shadow-lg glow col-start-2 row-start-2 flex items-center justify-center"
+                value="~Start~" outcome="goToMain"/>
+    </h:panelGroup>
+
+    <!-- Main container -->
+    <h:panelGroup layout="block" styleClass="font-sans min-h-screen bg-fixed bg-cover text-white p-3"
+         style="background-image: url('#{request.contextPath}/resources/images/start.jpg'); background-position: center;">
+
+        <!-- Header -->
+        <h:panelGroup layout="block" styleClass="mt-0.5 custom-grid-sm grid h-14 grid-cols-1 content-center items-center gap-2 rounded-lg border border-white shadow-lg backdrop-blur">
+
+            <!-- Header text -->
+            <h:panelGroup layout="block" styleClass="flex justify-center">
+                <p class="overflow-hidden whitespace-nowrap text-center align-middle text-base font-medium">var 67575
+                    |
+                    Nosov Georgii Ivanovich | P3232</p>
+            </h:panelGroup>
+
+            <!-- Time in HH, MM, SS format -->
+            <h:panelGroup layout="block" styleClass="hidden sm:flex sm:justify-end mr-2">
+                <h:panelGroup layout="block" id="date-time" styleClass="self-center text-right text-base font-medium">
+                    <h:outputText id="date" value="" escape="false" />,
+                    <h:outputText id="time" value="" escape="false" />
+                </h:panelGroup>
+            </h:panelGroup>
+        </h:panelGroup>
+
+        <!-- Date-time container for mobile (below md breakpoint) -->
+        <h:panelGroup layout="block" styleClass="mt-2 flex justify-center rounded-lg border border-white p-2 shadow-lg backdrop-blur sm:hidden">
+            <h:panelGroup layout="block" id="date-time-mobile" styleClass="text-center text-base font-medium">
+                <h:outputText id="date-mobile" value="" escape="false" />,
+                <h:outputText id="time-mobile" value="" escape="false" />
+            </h:panelGroup>
+        </h:panelGroup>
+    </h:panelGroup>
+
+    <script type="module" src="./resources/js/index.js"></script>
+
+</h:body>
+
+</html>

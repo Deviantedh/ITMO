@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Носов Георгий Иванович">
+    <meta name="description" content="Веб-программирование: Лабораторная работа №1.">
+    <meta name="keywords"
+          content="ITMO, ИТМО, ЛИТМО, web lab, веб, ПИиКТ, ВТ, Лабораторная работа, Веб-программирование" />
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Web programming laboratory work no. 1</title>
+
+    <style>
+        :root {
+            font-family: "Apple Chancery", cursive;
+            color-scheme: dark;
+            background-image: url('images/bg.png');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Полупрозрачная граница */
+            background: rgba(255, 255, 255, 0.15); /* Полупрозрачный матовый фон */
+            backdrop-filter: blur(5px); /* Эффект размытия для матовости */
+            color: white; /* Белый текст */
+        }
+
+        th {
+            background-color: rgba(242, 242, 242, 0.3);
+            font-weight: bold;
+        }
+
+        .container-table {
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .form, .graph {
+            padding: 20px;
+        }
+
+        .header {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(242, 242, 242, 0.3); /* Полупрозрачный фон для заголовка */
+        }
+
+        .header-info {
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .table-result {
+            margin-top: 20px;
+        }
+
+        #date-time {
+            font-size: 12px;
+            text-align: right;
+        }
+
+        .input-group, .check-btn {
+            padding: 10px;
+        }
+
+        input[type="text"], select, input[type="submit"] {
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон для полей ввода */
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+<table class="header">
+    <tr>
+        <td class="header-info" colspan="3">var 368598 | Nosov Georgii Ivanovich | P3232</td>
+        <td id="date-time" colspan="3">
+            <span id="date"></span>, <span id="time"></span>
+        </td>
+    </tr>
+</table>
+
+<table class="container-table">
+    <tr>
+        <td class="graph" colspan="3">
+            <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+                <line stroke="gray" x1="0" x2="300" y1="150" y2="150" />
+                <line stroke="gray" x1="150" x2="150" y1="0" y2="300" />
+                <polygon fill="white" points="150,0 144,15 156,15" stroke="white" />
+                <polygon fill="white" points="300,150 285,156 285,144" stroke="white" />
+
+                <!-- Засечки -->
+                <line stroke="gray" x1="200" x2="200" y1="155" y2="145" />
+                <line stroke="gray" x1="250" x2="250" y1="155" y2="145" />
+
+                <line stroke="gray" x1="50" x2="50" y1="155" y2="145" />
+                <line stroke="gray" x1="100" x2="100" y1="155" y2="145" />
+
+                <line stroke="gray" x1="145" x2="155" y1="100" y2="100" />
+                <line stroke="gray" x1="145" x2="155" y1="50" y2="50" />
+
+                <line stroke="gray" x1="145" x2="155" y1="200" y2="200" />
+                <line stroke="gray" x1="145" x2="155" y1="250" y2="250" />
+
+                <!-- Подписи к засечкам    -->
+                <text fill="white" x="195" y="140">R/2</text>
+                <text fill="white" x="248" y="140">R</text>
+
+                <text fill="white" x="40" y="140">-R</text>
+                <text fill="white" x="90" y="140">-R/2</text>
+
+                <text fill="white" x="160" y="105">R/2</text>
+                <text fill="white" x="160" y="55">R</text>
+
+                <text fill="white" x="160" y="205">-R/2</text>
+                <text fill="white" x="160" y="255">-R</text>
+
+                <text fill="white" x="160" y="10">Y</text>
+                <text fill="white" x="290" y="140">X</text>
+
+                <!-- Прямоугольник (слева сверху) -->
+                <rect x="50" y="50" width="100" height="100" fill="#FFFF00" fill-opacity="0.1" stroke="#FFFF00" />
+
+                <!-- Треугольник (справа снизу) -->
+                <polygon fill="#0000FF" fill-opacity="0.1" points="150,200 150,150 200,150" stroke="#0000FF" />
+
+                <!-- Полукруг (слева снизу) -->
+                <path d="M 50 150 A 100 100, 0, 0, 0, 150 250 L 150 150 Z" fill="green" fill-opacity="0.1"
+                      stroke="#39FF14" />
+
+                <!-- Центр оси координат -->
+                <circle cx="150" cy="150" id="target-dot" r="0" stroke="white" fill="white"></circle>
+
+            </svg>
+        </td>
+        <td class="form" colspan="3" id="input-form">
+            <form>
+                <div class="input-group">
+                    <p>X:</p>
+                    <div id="x" class="radio-group">
+                        <label><input type="radio" name="x" value="-5">-5</label>
+                        <label><input type="radio" name="x" value="-4">-4</label>
+                        <label><input type="radio" name="x" value="-3">-3</label>
+                        <label><input type="radio" name="x" value="-2">-2</label>
+                        <label><input type="radio" name="x" value="-1">-1</label>
+                        <label><input type="radio" name="x" value="0">0</label>
+                        <label><input type="radio" name="x" value="1">1</label>
+                        <label><input type="radio" name="x" value="2">2</label>
+                        <label><input type="radio" name="x" value="3">3</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="y">Y:</label>
+                    <input type="text" id="y" name="y" maxlength="8">
+                </div>
+                <div class="input-group">
+                    <label for="r">R:</label>
+                    <select id="r" name="r">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="check-btn">
+                    <input type="submit" value="Check">
+                </div>
+            </form>
+        </td>
+    </tr>
+</table>
+
+<table class="table-result">
+    <thead>
+    <tr>
+        <th>x</th>
+        <th>y</th>
+        <th>r</th>
+        <th>target hit or not</th>
+        <th>current time</th>
+        <th>duration of web1.jar running</th>
+    </tr>
+    </thead>
+    <tbody id="output">
+    <!-- Data rows generated dynamically by JavaScript -->
+    </tbody>
+</table>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script type="module" src="main.js"></script>
+</body>
+
+</html>

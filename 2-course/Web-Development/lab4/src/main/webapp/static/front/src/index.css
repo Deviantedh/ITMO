@@ -1,0 +1,36 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    height: 30px;
+    background-color: #1c0848;
+    text-align: center;
+    color: #dbdbdb;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+footer {
+    height: 5vh;
+    background-color: #1c0848;
+    text-align: center;
+    color: #dbdbdb;
+    font-size: 10px;
+}
