@@ -1,0 +1,4 @@
+show
+history
+executeScript script.txt
+exit
